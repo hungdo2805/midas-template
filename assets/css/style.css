@@ -390,6 +390,10 @@ h6 {
     max-width: 600px;
     margin: 0px auto;
   }
+
+  .to-top {
+    display: none !important;
+  }
 }
 .header-top {
   border-bottom: 1px solid #ebebeb;

@@ -1,0 +1,11 @@
+.specialoffer .product{
+   
+    border-bottom: 1px solid $gray-light;
+    padding-bottom: 20px;
+}
+.specialoffer .product:hover .product-countdown{
+    bottom: 0px;
+}
+.specialoffer .product-countdown{
+    position: relative;
+}

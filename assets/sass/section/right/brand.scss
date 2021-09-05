@@ -1,0 +1,38 @@
+.brand{
+    position: relative;
+    &-list{
+        --spacing:15px;
+        --column:5;
+        margin-left: calc(-1 * var(--spacing));
+        margin: 48px 0px;
+    }
+    &-item{
+        width: calc(calc(100% / var(--column)) - var(--spacing)) ;
+        margin-left: var(--spacing);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+    }
+
+    &-link{
+        display: block;
+    }
+    
+    @include minWidth(1600px){
+        &-list{
+            --column:6;
+        }
+    }
+    @include maxWidth(1400px){
+        &-list{
+            --column:3;
+        }
+    }
+    @include maxWidth(991px){
+        &-list{
+            --column:2;
+        }
+    }
+}
+

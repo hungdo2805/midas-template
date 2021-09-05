@@ -1,0 +1,110 @@
+.category{
+    margin: 50px 0px;
+
+    // .flickity-slider {
+    //     margin-left: -10px;
+    // }
+
+
+    &-banner{
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        height: 100%;
+        position: relative;
+
+        &-content{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            padding-left: 40px;
+        }
+
+        &-list{
+            margin-top: 29px;
+            & li:last-child a {
+                color: #fcb941;
+            }
+            & li a{
+                font-size: 14px;
+                padding: 8px 10px;
+                color: $primary-color;
+                position: relative;
+                display:block;
+                transition: all 0.3s ease-in-out;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: $primary-color;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover{
+                    color:$secondary-color;
+                }
+            }
+        }
+        @include maxWidth(991px){
+            &-list{
+                & li a{
+                    font-size: 10px;    
+                }
+            }
+        }
+    }
+    &-product{
+        position: relative;
+        
+        .previous-btn{
+            left:-10px;
+        }
+        .next-btn{
+            right:-10px;
+        }
+
+        &-list{
+            --spacing:20px;
+            --column:3;
+            // margin-left: calc(-1 * var(--spacing));
+            // margin-top: -15px;
+        }
+        &-item{
+            width: calc(calc(100% / var(--column)) - var(--spacing)) ;
+            margin-left: var(--spacing);
+
+        }
+        @include minWidth(1600px){
+            &-list{
+                --column:4;
+            }
+        }
+        @include maxWidth(1200px){
+            &-list{
+                --column:2;
+                margin-left: var(--spacing);
+            }
+        }
+
+    }
+
+}
+
+
+.category .product .product-image{
+    width: 100%;
+}
+// .category-product .product .product-inner{
+//     padding: 17px 0 25px;
+// }
+// .category-product .product .product-content {
+//     padding: 0 20px 20px;
+// }

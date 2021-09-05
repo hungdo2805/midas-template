@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixin";
+@import "function";
+@import "reset";
+@import "base";
+@import "section/header";
+@import "section/hero";
+
+//sidebar left
+@import "section/left/bestseller";
+@import "section/left/specialoffer";
+@import "section/left/bannersection";
+@import "section/left/blog";
+
+//right section
+@import "section/right/banner";
+@import "section/right/brand";
+@import "section/right/product";
+@import "section/right/trending";
+@import "section/right/category";
+@import "section/right/service";
+
+// end section right
+
+
+@import "section/newsletter";
+@import "section/footer";

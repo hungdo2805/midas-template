@@ -1,0 +1,53 @@
+.newsletter{
+    background-image: url('../images/newsletter-bg.jpg');
+    padding: 36px 0px;
+    margin-bottom: 30px;
+    width: 100%;
+    .container-fluid{
+        max-width: 1200px;
+    }
+    &-title{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        color:$secondary-color;
+        margin-bottom: 9px;
+    }
+    &-description{
+        font-size: 14px;
+        font-weight: 300;
+        color: $gray-light;
+    }
+
+    &-form{
+        display: flex;
+    }
+
+    &-input{
+        width: 100%;
+        border-radius: 2px;
+        padding-left: 20px;
+        font-size: 14px;
+        font-weight: 300;    
+    }
+    &-button{
+        text-transform: uppercase;
+        margin-left: 10px;
+        min-height: 46px;
+        color:#fff;
+        background:#5c5c5c;
+        padding: 0px 48.5px;
+
+        &:hover{
+            color:#fff;
+            background-color: $secondary-color;
+        }
+    }
+    @include maxWidth(991px) {
+        margin-top: 50px;
+        
+        &-form{
+          margin-top: 10px;
+        }
+    }
+}

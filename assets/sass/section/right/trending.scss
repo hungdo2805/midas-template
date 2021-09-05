@@ -1,0 +1,88 @@
+.trending{
+    position: relative;
+    padding: 54px 60px 65px 60px;
+    background-color: #fafafa;
+    
+    // .flickity-slider {
+    //     margin-left: -10px;
+    // }
+    .flickity-page-dots {
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .previous-btn{
+        left:-35px;
+    }
+    .next-btn{
+        right:-35px;
+    }
+
+    &-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tab{
+        &-item{
+            padding:10px 14.5px;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    &-list{
+        --spacing:20px;
+        --column:4;
+        margin-left: calc(-1 * var(--spacing));
+        margin-top: 30px;
+    }
+    &-item{
+        width: calc(calc(100% / var(--column)) - var(--spacing)) ;
+        margin-left: var(--spacing);
+        position: relative;
+    }
+    &-product{
+        // margin-top: 30px;
+        position: relative;
+        // padding: 22px 0 13px;
+        // margin-right: -10px;
+        // margin-left: -10px;
+    }
+
+    @include minWidth(1600px){
+        &-list{
+            --column:5;
+        }
+    }
+    @include maxWidth(1200px){
+        &-heading{
+            flex-direction: column;
+
+        }
+        &-list{
+            --column:3;
+        }
+        .tabs{
+            flex-wrap: wrap;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .tab-item{
+            margin-bottom: 10px;
+        }
+
+    }
+    @include maxWidth(991px){
+        &-list{
+            --column:2;
+        }
+    }
+    @include maxWidth(768px){
+        &-list{
+            --column:1;
+        }
+    }
+}
+
+

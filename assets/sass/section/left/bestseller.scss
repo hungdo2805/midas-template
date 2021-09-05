@@ -1,0 +1,53 @@
+
+.bestsellers{
+    &-heading{
+        border-bottom: 1px solid $gray-light;
+
+    }
+    .heading{
+        position: relative;
+        padding-top: 28px;
+        padding-bottom: 20px;
+        width: max-content;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background: $secondary-color;           
+        }
+    }
+
+}
+.product-sm{
+    &-item{
+        display: flex;
+        align-items: center;
+        margin: 20px 0px;
+    }
+    &-content{
+        margin-left: 20px;
+    }
+    &-title{
+        font-size: 14px;
+        font-weight: 300;
+        color:$dark-light;
+        line-height: 20px;
+        margin-top: 5px;
+        max-width: 182px;
+        transition:all 0.3s ease-in-out;
+        
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    &-price{
+        font-size: 14px;
+        font-weight: 400;
+        color:$secondary-color;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+.service{
+    padding: 50px 0px;
+    justify-content: center;
+    background:$service-bg;
+    margin-bottom: 50px;
+
+    &-box{
+        display: flex;
+    }
+    &-icon{
+        font-size: 40px;
+        font-weight: 400;
+        color:$primary-color;
+        margin-right: 20px;
+        position: relative;
+        top:-3px;
+    }
+    &-title{
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+    &-subtitle{
+        font-size: 16px;
+        font-weight: 300;
+        color: #999999;
+    }
+    @include maxWidth(991px) {
+        &-box{
+          margin-bottom: 10px;
+        }
+    }
+}
+
+@include minWidth(1600px){
+    .service .row{
+        padding: 0px 80px;
+    }
+}
